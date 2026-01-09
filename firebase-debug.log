@@ -1,0 +1,73 @@
+[debug] [2026-01-09T16:55:50.464Z] ----------------------------------------------------------------------
+[debug] [2026-01-09T16:55:50.471Z] Command:       /Users/esther/.nvm/versions/node/v24.12.0/bin/node /Users/esther/.nvm/versions/node/v24.12.0/bin/firebase init
+[debug] [2026-01-09T16:55:50.471Z] CLI Version:   15.2.1
+[debug] [2026-01-09T16:55:50.471Z] Platform:      darwin
+[debug] [2026-01-09T16:55:50.471Z] Node Version:  v24.12.0
+[debug] [2026-01-09T16:55:50.471Z] Time:          Sat Jan 10 2026 00:55:50 GMT+0800 (Singapore Standard Time)
+[debug] [2026-01-09T16:55:50.471Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/esther/Desktop/projects/atodolist
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] 
+[debug] [2026-01-09T16:55:56.159Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-09T16:55:56.159Z] > authorizing via signed-in user (xuxiufeng1124@gmail.com)
+[debug] [2026-01-09T16:55:56.160Z] Checked if tokens are valid: true, expires at: 1767981238161
+[debug] [2026-01-09T16:55:56.160Z] Checked if tokens are valid: true, expires at: 1767981238161
+[debug] [2026-01-09T16:55:56.161Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/firebasics-10689 [none]
+[debug] [2026-01-09T16:55:56.608Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/firebasics-10689 200
+[debug] [2026-01-09T16:55:56.609Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/firebasics-10689 {"projectId":"firebasics-10689","projectNumber":"77759798794","displayName":"firebasics","name":"projects/firebasics-10689","resources":{"hostingSite":"firebasics-10689"},"state":"ACTIVE","etag":"1_2dd09a0d-47d6-418d-ba8c-7e7004d27218"}
+[info] i  Using project firebasics-10689 (firebasics) . 
+[info] 
+=== Hosting Setup
+[debug] [2026-01-09T16:55:56.625Z] Checked if tokens are valid: true, expires at: 1767981238161
+[debug] [2026-01-09T16:55:56.625Z] Checked if tokens are valid: true, expires at: 1767981238161
+[debug] [2026-01-09T16:55:56.625Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/firebasics-10689 [none]
+[debug] [2026-01-09T16:55:57.082Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/firebasics-10689 200
+[debug] [2026-01-09T16:55:57.082Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/firebasics-10689 {"projectId":"firebasics-10689","projectNumber":"77759798794","displayName":"firebasics","name":"projects/firebasics-10689","resources":{"hostingSite":"firebasics-10689"},"state":"ACTIVE","etag":"1_2dd09a0d-47d6-418d-ba8c-7e7004d27218"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] 
+[info] i  Didn't detect a .git folder. Assuming /Users/esther/Desktop/projects/atodolist is the project root. 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=794058341&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2026-01-09T16:56:18.853Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2026-01-09T16:56:18.854Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2026-01-09T16:56:19.370Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2026-01-09T16:56:19.370Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2026-01-09T16:56:19.380Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2026-01-09T16:56:19.890Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2026-01-09T16:56:19.890Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"ParsifalXu","id":43930877,"node_id":"MDQ6VXNlcjQzOTMwODc3","avatar_url":"https://avatars.githubusercontent.com/u/43930877?v=4","gravatar_id":"","url":"https://api.github.com/users/ParsifalXu","html_url":"https://github.com/ParsifalXu","followers_url":"https://api.github.com/users/ParsifalXu/followers","following_url":"https://api.github.com/users/ParsifalXu/following{/other_user}","gists_url":"https://api.github.com/users/ParsifalXu/gists{/gist_id}","starred_url":"https://api.github.com/users/ParsifalXu/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/ParsifalXu/subscriptions","organizations_url":"https://api.github.com/users/ParsifalXu/orgs","repos_url":"https://api.github.com/users/ParsifalXu/repos","events_url":"https://api.github.com/users/ParsifalXu/events{/privacy}","received_events_url":"https://api.github.com/users/ParsifalXu/received_events","type":"User","user_view_type":"private","site_admin":false,"name":"LegolasXu","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"notification_email":null,"public_repos":15,"public_gists":0,"followers":5,"following":2,"created_at":"2018-10-07T13:42:06Z","updated_at":"2025-12-12T07:26:00Z","private_gists":0,"total_private_repos":47,"owned_private_repos":46,"disk_usage":267217,"collaborators":12,"two_factor_authentication":true,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as ParsifalXu 
+[info] 
+[debug] [2026-01-09T16:56:33.960Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2026-01-09T16:56:34.313Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2026-01-09T16:56:34.313Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest","status":"404"}
+[info] 
+[info] 
+[error] ⚠  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 

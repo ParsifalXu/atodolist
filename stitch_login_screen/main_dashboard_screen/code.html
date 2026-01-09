@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TaskFlow - Main Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .mesh-gradient {
+            background-color: #f6f6f8;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(19, 91, 236, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(19, 91, 236, 0.03) 0px, transparent 50%);
+        }
+        .dark .mesh-gradient {
+            background-color: #101622;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(19, 91, 236, 0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(19, 91, 236, 0.05) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#0d121b] dark:text-slate-200 mesh-gradient min-h-screen">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-72 flex-shrink-0 border-r border-[#e7ebf3] dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col justify-between p-6">
+<div class="flex flex-col gap-8">
+<!-- User Profile & Logo -->
+<div class="flex items-center gap-3">
+<div class="size-10 bg-primary rounded-xl flex items-center justify-center text-white">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div>
+<h1 class="text-lg font-bold leading-tight tracking-tight dark:text-white">TaskFlow</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400">Workspace Individual</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">inbox</span>
+<span class="text-sm font-medium">Inbox</span>
+<span class="ml-auto text-xs font-semibold bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-full">12</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px] fill-1">calendar_today</span>
+<span class="text-sm font-bold">Today</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">event</span>
+<span class="text-sm font-medium">Upcoming</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined text-[22px]">task_alt</span>
+<span class="text-sm font-medium">Completed</span>
+</a>
+</nav>
+<!-- Projects Section -->
+<div>
+<div class="flex items-center justify-between px-3 mb-2">
+<span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Projects</span>
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<div class="size-2 rounded-full bg-blue-500"></div>
+<span class="text-sm font-medium">Work Project</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<div class="size-2 rounded-full bg-purple-500"></div>
+<span class="text-sm font-medium">Personal</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" href="#">
+<div class="size-2 rounded-full bg-emerald-500"></div>
+<span class="text-sm font-medium">Fitness</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Sidebar Bottom -->
+<div class="flex flex-col gap-4">
+<div class="p-4 bg-primary/5 rounded-xl border border-primary/10">
+<p class="text-xs font-bold text-primary mb-1">Pro Plan</p>
+<p class="text-[11px] text-slate-500 dark:text-slate-400 mb-3">Get unlimited projects and AI insights.</p>
+<button class="w-full py-2 bg-primary text-white text-xs font-bold rounded-lg hover:bg-blue-700 transition-colors">Upgrade</button>
+</div>
+<div class="flex items-center gap-3 px-2">
+<div class="size-10 rounded-full bg-center bg-cover border-2 border-white dark:border-slate-800 shadow-sm" data-alt="User profile avatar of Alex Johnson" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDfqeKHjcmiDGWz-DF5QrCrrxZeH4f3ZyOyJdXXaVHVNc_dCzcfvGOwifudTu6-f5D3r5U-4GGUvKOblw21UOuAqIIj55dVbUtW999KkoPR4QUQAEqnQdwkhrec7ss95P6EzGg30NHNGBg1WTBt5mbjyi4JpFuzCsLNVCEauqoErcjv8SjfIVJ667PrlnR_S3VuiDlQDaGojPGmGF4cucU22oip54XVIDrYOJGJnzf8noiEtvtoLGEeEuJ15EZj6XmoO5NGOm0ZLBPK");'></div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold truncate dark:text-white">Alex Johnson</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 truncate">Productivity Pro</p>
+</div>
+<button class="text-slate-400 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-xl">logout</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col h-full relative">
+<!-- Header Top Bar -->
+<header class="h-16 flex items-center justify-between px-10 bg-white/50 dark:bg-slate-900/50 backdrop-blur-md border-b border-[#e7ebf3] dark:border-slate-800 sticky top-0 z-10">
+<div class="flex items-center gap-4 w-1/3">
+<label class="flex flex-col w-full max-w-md">
+<div class="flex w-full items-stretch rounded-lg h-10 group">
+<div class="text-slate-400 flex items-center justify-center pl-3 pr-2" data-icon="search">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full bg-transparent border-none focus:ring-0 text-sm placeholder:text-slate-400 dark:text-white" placeholder="Search tasks or commands..." type="text"/>
+</div>
+</label>
+</div>
+<div class="flex items-center gap-3">
+<button class="size-10 flex items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="size-10 flex items-center justify-center rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto px-10 py-12 scroll-smooth">
+<div class="max-w-4xl mx-auto">
+<!-- Greeting Section -->
+<div class="mb-10">
+<h1 class="text-4xl font-bold tracking-tight text-[#0d121b] dark:text-white mb-2">Good morning, Alex</h1>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-base">calendar_month</span>
+<span class="text-lg font-medium">Thursday, October 24th</span>
+</div>
+</div>
+<!-- Add Task Input -->
+<div class="mb-10">
+<div class="group relative flex items-center bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-2 shadow-sm focus-within:ring-2 focus-within:ring-primary/20 transition-all duration-200">
+<div class="pl-4 pr-3 text-primary">
+<span class="material-symbols-outlined">add_circle</span>
+</div>
+<input class="flex-1 border-none focus:ring-0 bg-transparent py-3 text-base placeholder:text-slate-400 dark:text-white" placeholder="What's on your mind? Add a task..." type="text"/>
+<div class="flex items-center gap-2 pr-2">
+<button class="px-3 py-1.5 rounded-lg border border-slate-100 dark:border-slate-700 text-xs font-semibold text-slate-500 flex items-center gap-1 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                                    Today
+                                </button>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-white text-xs font-bold shadow-md hover:bg-blue-700 transition-colors">
+                                    Add Task
+                                </button>
+</div>
+</div>
+</div>
+<!-- Task Groups -->
+<div class="space-y-8">
+<!-- High Priority Section -->
+<section>
+<div class="flex items-center gap-3 mb-4">
+<h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Priority Focus</h3>
+<div class="h-[1px] flex-1 bg-slate-100 dark:bg-slate-800"></div>
+</div>
+<div class="grid gap-3">
+<!-- Task Card 1 -->
+<div class="group flex items-center gap-4 p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 hover:shadow-md transition-all">
+<button class="size-6 rounded-full border-2 border-red-500/30 flex items-center justify-center group-hover:bg-red-500/10 transition-colors">
+<div class="size-3 rounded-full bg-red-500 opacity-0 group-hover:opacity-10 transition-opacity"></div>
+</button>
+<div class="flex-1">
+<h4 class="text-base font-semibold text-[#0d121b] dark:text-white">Finalize Q4 Marketing Proposal</h4>
+<div class="flex items-center gap-4 mt-1">
+<span class="flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">folder</span>
+                                                Work Project
+                                            </span>
+<span class="flex items-center gap-1 text-xs text-red-500 font-bold bg-red-50/50 dark:bg-red-500/10 px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-[14px] fill-1">priority_high</span>
+                                                High
+                                            </span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-medium text-slate-400">Due 2:00 PM</span>
+</div>
+</div>
+<!-- Task Card 2 -->
+<div class="group flex items-center gap-4 p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 hover:shadow-md transition-all">
+<button class="size-6 rounded-full border-2 border-orange-500/30 flex items-center justify-center group-hover:bg-orange-500/10 transition-colors">
+<div class="size-3 rounded-full bg-orange-500 opacity-0 group-hover:opacity-10 transition-opacity"></div>
+</button>
+<div class="flex-1">
+<h4 class="text-base font-semibold text-[#0d121b] dark:text-white">Call the dentist for check-up</h4>
+<div class="flex items-center gap-4 mt-1">
+<span class="flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">folder</span>
+                                                Personal
+                                            </span>
+<span class="flex items-center gap-1 text-xs text-orange-500 font-bold bg-orange-50/50 dark:bg-orange-500/10 px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-[14px] fill-1">stat_1</span>
+                                                Medium
+                                            </span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-lg cursor-pointer hover:text-slate-600">edit</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Standard Section -->
+<section>
+<div class="flex items-center gap-3 mb-4">
+<h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest">Upcoming Today</h3>
+<div class="h-[1px] flex-1 bg-slate-100 dark:bg-slate-800"></div>
+</div>
+<div class="grid gap-3">
+<!-- Task Card 3 -->
+<div class="group flex items-center gap-4 p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 hover:shadow-md transition-all opacity-80">
+<button class="size-6 rounded-full border-2 border-slate-200 dark:border-slate-700 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-[14px] text-primary opacity-0 group-hover:opacity-100">check</span>
+</button>
+<div class="flex-1">
+<h4 class="text-base font-medium text-slate-600 dark:text-slate-300">Water the apartment plants</h4>
+<div class="flex items-center gap-4 mt-1">
+<span class="flex items-center gap-1 text-xs text-slate-400">
+<span class="material-symbols-outlined text-sm">folder</span>
+                                                Personal
+                                            </span>
+<span class="flex items-center gap-1 text-xs text-slate-400 font-bold bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded-md">
+                                                Low
+                                            </span>
+</div>
+</div>
+<div class="text-slate-400">
+<span class="material-symbols-outlined text-lg cursor-pointer hover:text-slate-600">more_vert</span>
+</div>
+</div>
+<!-- Task Card 4 -->
+<div class="group flex items-center gap-4 p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-primary/50 hover:shadow-md transition-all">
+<button class="size-6 rounded-full border-2 border-slate-200 dark:border-slate-700 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+</button>
+<div class="flex-1">
+<h4 class="text-base font-semibold text-[#0d121b] dark:text-white">Review team performance metrics</h4>
+<div class="flex items-center gap-4 mt-1">
+<span class="flex items-center gap-1 text-xs text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">folder</span>
+                                                Work Project
+                                            </span>
+<span class="flex items-center gap-1 text-xs text-orange-500 font-bold bg-orange-50/50 dark:bg-orange-500/10 px-2 py-0.5 rounded-md">
+                                                Medium
+                                            </span>
+</div>
+</div>
+<div class="text-slate-400">
+<span class="material-symbols-outlined text-lg">attachment</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Achievement Card (Subtle nudge) -->
+<div class="mt-12 p-6 rounded-2xl bg-gradient-to-br from-primary to-blue-700 text-white shadow-xl flex items-center justify-between">
+<div>
+<h3 class="text-xl font-bold mb-1">You're on a roll! 🚀</h3>
+<p class="text-blue-100 text-sm opacity-90">Completed 8 tasks so far this week. Keep up the great work, Alex.</p>
+</div>
+<div class="text-right">
+<span class="text-3xl font-bold">85%</span>
+<p class="text-[10px] uppercase tracking-widest font-bold opacity-70">Daily Goal</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Action Button -->
+<button class="fixed bottom-8 right-8 size-14 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform z-20 group">
+<span class="material-symbols-outlined text-3xl">add</span>
+<span class="absolute right-full mr-4 bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">Add New Task</span>
+</button>
+</main>
+</div>
+</body></html>

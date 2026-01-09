@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sign Up | TaskMaster</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display">
+<div class="flex min-h-screen">
+<!-- Left Side: Visual Branding (Hidden on mobile, visible on lg+) -->
+<div class="hidden lg:flex lg:w-1/2 relative bg-primary items-center justify-center p-12 overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="relative z-10 max-w-lg text-white">
+<div class="flex items-center gap-3 mb-12">
+<div class="size-10 bg-white text-primary rounded-lg flex items-center justify-center">
+<svg class="size-6" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="text-2xl font-bold tracking-tight">TaskMaster</span>
+</div>
+<h1 class="text-5xl font-black leading-tight mb-6">
+                    Organize your life, one task at a time.
+                </h1>
+<p class="text-lg text-white/80 mb-8">
+                    Join over 10,000+ professionals who use TaskMaster to streamline their workflow and hit their goals faster.
+                </p>
+<div class="grid grid-cols-2 gap-6">
+<div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20">
+<span class="material-symbols-outlined mb-2">check_circle</span>
+<p class="font-semibold">Smart Scheduling</p>
+<p class="text-sm text-white/60">AI-powered task prioritization</p>
+</div>
+<div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20">
+<span class="material-symbols-outlined mb-2">group</span>
+<p class="font-semibold">Team Sync</p>
+<p class="text-sm text-white/60">Real-time collaboration tools</p>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-white/20">
+<div class="flex -space-x-2">
+<div class="w-10 h-10 rounded-full border-2 border-primary bg-gray-200 overflow-hidden" data-alt="User avatar thumbnail one" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSVyth5F7zEMYUjBDSHAPO9N4ykZb_C66RAT7ilpqlsVDha9RNqqCviqUyTjP1A1WFVzwbEcgberJykXWLGt7kOKvbUV3Ndv_Il_PejmJKyO6pctmHmJtfA8x0AFjwcwd4pxmju5qSdW321uJ6Pv4PlWObpT0kS8H52dBk1Arcqw4ammec3PqFXITRjc4wIL0RxxabcwWa0shNrcj3yGPINHYfAByVMb77Jy45qOv1r7aKOJiJXmFpgo8W-InkTF40C_uTgNF2pbCc'); background-size: cover;"></div>
+<div class="w-10 h-10 rounded-full border-2 border-primary bg-gray-200 overflow-hidden" data-alt="User avatar thumbnail two" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHrsWgcTPyJ-XsKnlHszUrDW3icCyDZFMdaOKamWqDnjzlHAnGErkX23xfIR7OeVDmEQaqCCNxMBmhZM2q-sRJt-F6ywNiDLM3oYqms2A8LuKJuYWCnmKYdEBpnSQad34CQrwVhK0Do02kyKLEu1P7ABAFgprceZRm-1HAtQSsbF6Ym-BzO2jVi3StIH8QUTX5XMTNC0Flr-7RxmBo33X_zmCMPbyk09JwHtvZ8rpdFarhUsqhGC0C30Ecs6Lg9lSuLakgdlC_XDn8'); background-size: cover;"></div>
+<div class="w-10 h-10 rounded-full border-2 border-primary bg-gray-200 overflow-hidden" data-alt="User avatar thumbnail three" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAjc4cF5nSWL17dMYAmSYfiCI13bK_EdEErSAw1M--ikD4aSqEBUcdSc92rU9oWQf5XJbhs1csCAjNPguy9OlBNLlPfjdHL4CUnNqZI7VCaR0eCqvPQO4iqjtx4YBqOUyVyG-vYOAZH0RPyRudtc1csVMOSsicU2F_pJhzcTXNsuhlzghfSfr225So0ePXsCvvMX-Eg_5IBYooLVDT69yi1Tvr9WxkcYXNGFdOXPMtK8smR5NRdCeFU0OyhaUnTmliI-soxj3Av2oLs'); background-size: cover;"></div>
+<div class="w-10 h-10 rounded-full border-2 border-primary bg-white/20 flex items-center justify-center text-xs font-bold">+10k</div>
+</div>
+<p class="mt-3 text-sm text-white/70 italic">"The best productivity tool I've ever used."</p>
+</div>
+</div>
+</div>
+<!-- Right Side: Sign Up Form -->
+<div class="w-full lg:w-1/2 flex flex-col items-center justify-center p-8 lg:p-24 bg-background-light dark:bg-background-dark">
+<div class="w-full max-w-[480px]">
+<!-- Logo for mobile -->
+<div class="flex items-center gap-3 mb-10 lg:hidden">
+<div class="size-8 bg-primary text-white rounded-lg flex items-center justify-center">
+<svg class="size-5" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="text-xl font-bold tracking-tight dark:text-white">TaskMaster</span>
+</div>
+<div class="mb-8">
+<h2 class="text-[#0d121b] dark:text-white text-3xl font-bold leading-tight mb-2">Create your account</h2>
+<p class="text-[#4c669a] dark:text-gray-400 text-base">Start your journey towards better productivity.</p>
+</div>
+<form class="flex flex-col gap-5">
+<!-- Full Name -->
+<div class="flex flex-col gap-2">
+<label class="text-[#0d121b] dark:text-gray-200 text-sm font-medium leading-none">Full Name</label>
+<div class="relative">
+<input class="form-input flex w-full rounded-lg text-[#0d121b] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#cfd7e7] dark:border-gray-700 bg-white dark:bg-gray-800 h-12 placeholder:text-[#4c669a] dark:placeholder:text-gray-500 px-4 text-sm font-normal transition-all" placeholder="e.g. John Doe" type="text"/>
+</div>
+</div>
+<!-- Email Address -->
+<div class="flex flex-col gap-2">
+<label class="text-[#0d121b] dark:text-gray-200 text-sm font-medium leading-none">Email Address</label>
+<div class="relative">
+<input class="form-input flex w-full rounded-lg text-[#0d121b] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#cfd7e7] dark:border-gray-700 bg-white dark:bg-gray-800 h-12 placeholder:text-[#4c669a] dark:placeholder:text-gray-500 px-4 text-sm font-normal transition-all" placeholder="name@company.com" type="email"/>
+</div>
+</div>
+<!-- Password -->
+<div class="flex flex-col gap-2">
+<label class="text-[#0d121b] dark:text-gray-200 text-sm font-medium leading-none">Password</label>
+<div class="relative">
+<input class="form-input flex w-full rounded-lg text-[#0d121b] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#cfd7e7] dark:border-gray-700 bg-white dark:bg-gray-800 h-12 placeholder:text-[#4c669a] dark:placeholder:text-gray-500 px-4 text-sm font-normal transition-all" placeholder="Min. 8 characters" type="password"/>
+</div>
+</div>
+<!-- Confirm Password -->
+<div class="flex flex-col gap-2">
+<label class="text-[#0d121b] dark:text-gray-200 text-sm font-medium leading-none">Confirm Password</label>
+<div class="relative">
+<input class="form-input flex w-full rounded-lg text-[#0d121b] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-[#cfd7e7] dark:border-gray-700 bg-white dark:bg-gray-800 h-12 placeholder:text-[#4c669a] dark:placeholder:text-gray-500 px-4 text-sm font-normal transition-all" placeholder="Repeat your password" type="password"/>
+</div>
+</div>
+<!-- Terms checkbox -->
+<div class="flex items-start gap-3 mt-1">
+<input class="mt-1 h-4 w-4 rounded border-gray-300 dark:border-gray-700 text-primary focus:ring-primary" id="terms" type="checkbox"/>
+<label class="text-sm text-[#4c669a] dark:text-gray-400" for="terms">
+                            I agree to the <a class="text-primary hover:underline" href="#">Terms of Service</a> and <a class="text-primary hover:underline" href="#">Privacy Policy</a>.
+                        </label>
+</div>
+<!-- Create Account Button -->
+<button class="mt-2 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold transition-all hover:bg-primary/90 shadow-lg shadow-primary/20" type="submit">
+<span class="truncate">Create Account</span>
+</button>
+</form>
+<div class="mt-8 flex items-center gap-4">
+<div class="h-px flex-1 bg-[#cfd7e7] dark:bg-gray-700"></div>
+<span class="text-xs font-medium text-[#4c669a] dark:text-gray-500 uppercase tracking-wider">Or continue with</span>
+<div class="h-px flex-1 bg-[#cfd7e7] dark:bg-gray-700"></div>
+</div>
+<div class="mt-6 flex gap-4">
+<button class="flex-1 flex items-center justify-center gap-2 h-11 border border-[#cfd7e7] dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+<svg class="w-5 h-5" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
+</svg>
+<span class="text-sm font-semibold text-[#0d121b] dark:text-white">Google</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-2 h-11 border border-[#cfd7e7] dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"></path>
+</svg>
+<span class="text-sm font-semibold text-[#0d121b] dark:text-white">GitHub</span>
+</button>
+</div>
+<!-- Footer link -->
+<p class="mt-10 text-center text-sm text-[#4c669a] dark:text-gray-400">
+                    Already have an account? 
+                    <a class="text-primary font-bold hover:underline" href="#">Sign In</a>
+</p>
+</div>
+</div>
+</div>
+</body></html>
